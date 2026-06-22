@@ -43,20 +43,20 @@ class UserForm
                             ->readonly()
                             ->dehydrated(false)
                             ->disabled(),
-                        TextInput::make('subscription')
+                        TextInput::make('activeSubscription')
                             ->label('Active Subscription')
                             ->placeholder('N/A')
                             ->readonly()
                             ->disabled()
                             ->dehydrated(false)
                             ->formatStateUsing(fn ($record) => $record->activeSubscription?->name),
-                        TextInput::make('boost')
+                        TextInput::make('activeBoost')
                             ->label('Active Boost')
                             ->placeholder('N/A')
                             ->readonly()
                             ->disabled()
                             ->dehydrated(false)
-                            ->formatStateUsing(fn ($record) => $record->boost?->name),
+                            ->formatStateUsing(fn ($record) => $record->activeBoost?->name),
                         TextInput::make('reports_received_count')
                             ->label('Reports Received')
                             ->placeholder('0')
